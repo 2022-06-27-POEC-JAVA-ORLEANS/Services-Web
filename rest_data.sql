@@ -3,6 +3,8 @@ CREATE DATABASE IF NOT EXISTS tp_rest;
 USE tp_rest;
 
  -- Table structure for table `utilisateurs`
+DROP TABLE IF EXISTS `utilisateurs`;
+ 
 CREATE TABLE IF NOT EXISTS `utilisateurs` ( `id` int(11) NOT NULL AUTO_INCREMENT, `lastname` varchar(100) NOT NULL, `firstname` varchar(100) NOT NULL, `email` varchar(100) NOT NULL, `password` varchar(40) NOT NULL, `role` enum('normal','admin') NOT NULL, PRIMARY KEY (`id`), UNIQUE KEY `mail` (`email`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
